@@ -68,6 +68,12 @@
 		</resource>
 		<resource>
 			<reference>
+				<reference value="StructureDefinition/au-core-cholesterol"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
 				<reference value="StructureDefinition/au-core-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
