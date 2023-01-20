@@ -68,12 +68,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="StructureDefinition/au-core-cholesterol"/>
-			</reference>
-			<exampleBoolean value="false"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="StructureDefinition/au-core-condition"/>
 			</reference>
 			<exampleBoolean value="false"/>
@@ -96,6 +90,13 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/au-core-individual-lipid-result"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource> 
 		<resource>
 			<reference>
 				<reference value="StructureDefinition/au-core-immunization"/>
@@ -315,7 +316,76 @@
 			</reference>
 			<exampleBoolean value="false"/>
 		</resource>
+		
+		<!--TERMINOLOGY-->
+		<!-- new -->
+		<resource>
+			<reference>
+				<reference value="ValueSet/pathology-reporting-individual-lipid"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/pathology-diagnostic-service-category-1"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/observationstatus-result-available-1"/>
+			</reference>
+			<exampleBoolean value="false"/>
+		</resource>
+		
 		<!--EXAMPLES-->
+
+		<!-- new -->
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1"/>
+			</reference>
+			<name value="Observation - Cholesterol 1"/>
+			<description value="Cholesterol result of Ms. Emma SMITH"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-fail-additional-category"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-inv-fail-no-unit-system-code"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-inv-fail-no-unit"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-inv-fail-no-system"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-inv-fail-no-code"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/cholesterol-1-inv-pass-ratio-test"/>
+			</reference>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
+		</resource>
+		<!-- new -->
 		<!--ALLERGYINTOLERANCE EXAMPLES-->
 		<resource>
 			<reference>

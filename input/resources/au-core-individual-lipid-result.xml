@@ -31,12 +31,12 @@
         <element id="Observation">
             <path value="Observation" />
             <constraint>
-                <key id="inv-au-core-lipid-01" />
+                <key value="inv-au-core-lipid-01" />
                 <severity value="error"/>
                 <human
                        value="A pathology result value SHALL have an associated unit, system and code if the test is anything other than a Cholesterol/HDL Cholesterol ratio."/>
                 <expression
-                            value="code.coding.where(system='http://loinc.org' and code!='32309-7).exists and valueQuantity.value.exists() implies valueQuantity.unit.exists() and valueQuantity.system.exists() and valueQuantity.code.exists()"/>
+                            value="code.coding.where(system='http://loinc.org' and code!='32309-7').exists() and valueQuantity.value.exists() implies valueQuantity.unit.exists() and valueQuantity.system.exists() and valueQuantity.code.exists()"/>
                 <source
                         value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-individual-lipid-result"/>
 
@@ -44,10 +44,13 @@
         </element>
         <element id="Observation.category">
             <path value="Observation.category" />
+            <short value="An individual lipid pathology test result in an Australian healthcare context"/>
+            <definition value="An individual lipid pathology test result for a patient. This observation is a single test often included in a lipid panel."/>
             <min value="2"/>
         </element>
         <element id="Observation.category:specificDiscipline">
             <path value="Observation.category" />
+            <short value="Chemistry"/>
             <sliceName value="specificDiscipline"/>
             <min value="1"/>
             <max value="1"/>
@@ -64,6 +67,8 @@
         </element>
         <element id="Observation.code">
             <path value="Observation.code" />
+            <short value="Individual Lipid Test"/>
+            <comment value="The binding refers to a value set that includes values aligned with the RCPA Standardised Pathology Informatics in Australia (SPIA) reporting guidelines."/>
             <binding>
                 <strength value="required"/>
                 <valueSet
