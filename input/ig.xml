@@ -494,14 +494,6 @@
 		</resource>
 		<resource>
 			<reference>
-				<reference value="Observation/cholesterol-1"/>
-			</reference>
-			<name value="Observation - Cholesterol"/>
-			<description value="Cholesterol results for Ms. Emma Smith"/>
-			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
-		</resource>
-		<resource>
-			<reference>
 				<reference value="Observation/edd-1"/>
 			</reference>
 			<name value="Observation - Estimated Date of Delivery"/>
@@ -563,6 +555,54 @@
 			<name value="Observation - Last menstrual period"/>
 			<description value="Ms. Emma SMITH - Last menstrual period 2021-12-01"/>
 			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lastmenstrualperiod"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-cholesterol-1"/>
+			</reference>
+			<name value="Observation - Cholesterol"/>
+			<description value="Cholesterol result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-hdl-1"/>
+			</reference>
+			<name value="Observation - HDL"/>
+			<description value="HDL result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-ldl-1"/>
+			</reference>
+			<name value="Observation - LDL"/>
+			<description value="LDL result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-non-hdlc-1"/>
+			</reference>
+			<name value="Observation - Non HDL Cholesterol"/>
+			<description value="Non HDL Cholesterol result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-total-chol-hdl-1"/>
+			</reference>
+			<name value="Observation - Total Cholesterol/HDL ratio"/>
+			<description value="Total Cholesterol/HDL ratio result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/lipid-triglyceride-1"/>
+			</reference>
+			<name value="Observation - Triglyceride"/>
+			<description value="Triglyceride result for Ms. Emma Smith"/>
+			<exampleCanonical value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-lipid-result"/>
 		</resource>
 		<resource>
 			<reference>
