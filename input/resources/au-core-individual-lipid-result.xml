@@ -30,6 +30,8 @@
     <differential>
         <element id="Observation">
             <path value="Observation" />
+            <short value="An individual lipid pathology test result in an Australian healthcare context"/>
+            <definition value="An individual lipid pathology test result for a patient. This observation is a single test often included in a lipid panel."/>
             <constraint>
                 <key value="inv-au-core-lipid-01" />
                 <severity value="error"/>
@@ -44,8 +46,6 @@
         </element>
         <element id="Observation.category">
             <path value="Observation.category" />
-            <short value="An individual lipid pathology test result in an Australian healthcare context"/>
-            <definition value="An individual lipid pathology test result for a patient. This observation is a single test often included in a lipid panel."/>
             <min value="2"/>
         </element>
         <element id="Observation.category:specificDiscipline">
