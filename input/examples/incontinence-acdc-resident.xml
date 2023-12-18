@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="incontinence-acdc-resident"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+  </meta>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="exam"/>
+      <display value="Exam"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="129008009"/>
+      <display value="Bowel control"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/acdc-resident"/>
+  </subject>
+  <effectiveDateTime value="2023-12-02"/>
+  <issued value="2023-12-02T09:20:00.000+10:00"/>
+  <valueCodeableConcept>
+    <coding>
+        <system value="http://loinc.org"/>
+        <code value="LA129-9"/>
+        <display value="FREQUENTLY INCONTINENT-BLADDER, tended to be incontinent daily, but some control present (e.g., on day shift); BOWEL, 2-3 times a week"/>
+    </coding>
+    <text value="Incontinent of faeces: 2-3 times a week"/>
+  </valueCodeableConcept>
+</Observation>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="iad-acdc-resident"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="416462003"/>
+            <display value="Wound"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="402275006"/>
+            <display value="Irritant contact dermatitis due to contact with urine and/or faeces"/>
+        </coding> 
+        <text value="Incontinence associated dermatitis (IAD)"/>
+    </code>
+    <bodySite>
+        <text value="Both buttocks"/>
+    </bodySite>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <onsetDateTime value="2023-12-12"/>
+    <recordedDate value="2023-12-12T09:20:00+10:00"/>
+    <stage>
+        <summary>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="264654002"/>
+                <display value="1B"/>
+            </coding>
+            <text value="1B"/>
+        </summary>        
+        <type>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="260998006"/>
+                <display value="Clinical staging"/>
+            </coding>
+        </type>
+    </stage>
+    <evidence>
+        <code>
+            <text value="Large areas of persistent redness with white skin scaling and extensive maceration evident on the inner aspects of both buttocks."/>
+        </code>
+    </evidence>
+</Condition>

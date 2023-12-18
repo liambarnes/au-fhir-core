@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns="http://hl7.org/fhir">
+    <id value="restraint-acdc-resident"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-procedure"/>
+    </meta>
+    <status value="in-progress"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="225214000"/>
+            <display value="Procedures relating to control, restraint, seclusion and segregation"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="68894007"/>
+            <display value="Placing restraint"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <performedDateTime value="2023-12-13T19:20:00+10:00"/>
+    <note>
+        <time value="2023-12-13T19:20:00+10:00"/>
+        <text value="Asleep"/>
+    </note>
+    <note>
+        <time value="2023-12-13T19:20:00+10:00"/>
+        <text value="RP applied"/>
+    </note>
+    <usedCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="37953008"/>
+            <display value="Bedside rails"/>
+        </coding>
+        <text value="Mechanical - Bedrails"/>
+    </usedCode>
+</Procedure>

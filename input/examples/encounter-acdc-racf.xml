@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="acdc-racf"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+    </meta>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
+        <valueString value="ACDC+ encounter for Mrs Resident at the RACF"/>
+    </extension>
+    <status value="in-progress"/>
+    <statusHistory>
+        <status value="onleave"/>
+        <period>
+            <start value="2023-12-07T09:10:00+10:00"/>
+            <end value="2023-12-10T09:15:00+10:00"/>
+        </period>
+    </statusHistory>
+    <class>
+        <system value="http://terminology.hl7.org.au/CodeSystem/v3-ActCode"/>
+        <code value="RACF"/>
+        <display value="Residential Aged Care Facility"/>                    
+    </class>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <period>
+        <start value="2020-02-10"/>
+    </period>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="410201001"/> <!-- Weight maintenance regimen management-->
+        </coding>
+    </reasonCode>
+    <serviceProvider>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="FI"/>
+                </coding>
+            </type>
+            <system value="http://example.com/dohac/facility-id"/>
+            <value value="98765"/>
+            <assigner>
+                <display value="Services Australia"/>
+            </assigner>
+        </identifier>
+        <display value="ACDC+ RACF"/>
+    </serviceProvider>
+</Encounter>

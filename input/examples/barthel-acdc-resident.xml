@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="barthel-acdc-resident"/>
+  <meta>
+    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
+  </meta>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+      <display value="Survey"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="443653008"/>
+      <display value="Modified Barthel index of activities of daily living score"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/acdc-resident"/>
+  </subject>
+  <effectiveDateTime value="2023-12-02"/>
+  <issued value="2023-12-02T09:20:00.000+10:00"/>
+  <valueQuantity>
+    <value value="11"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{score}"/>
+  </valueQuantity>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83184-2"/>
+            <display value="Feeding or eating - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83185-9"/>
+            <display value="Transferring - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96767-9"/>
+            <display value="Grooming - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83183-4"/>
+            <display value="Toileting - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83181-8"/>
+            <display value="Bathing - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="0"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83186-7"/>
+            <display value="Ambulation - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96758-8"/>
+            <display value="Stairs - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="83182-6"/>
+            <display value="Dressing - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96759-6"/>
+            <display value="Bowel control - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="0"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="96760-4"/>
+            <display value="Bladder control - functional ability"/>
+        </coding>
+    </code>
+    <valueQuantity>
+      <value value="1"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="{score}"/>
+    </valueQuantity>
+  </component>
+</Observation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Encounter xmlns="http://hl7.org/fhir">
+    <id value="acdc-hospitalisation"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
+    </meta>
+    <extension url="http://hl7.org.au/fhir/StructureDefinition/encounter-description">
+        <valueString value="ACDC+ encounter for Mrs Resident hospital visit"/>
+    </extension>
+    <status value="finished"/>
+    <class>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="IMP"/>                  
+    </class>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <period>
+        <start value="2023-12-07T09:10:00+10:00"/>
+        <end value="2023-12-10T09:15:00+10:00"/>
+    </period>
+    <length>
+        <value value="4"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+    </length>
+    <reasonCode>
+        <text value="Scheduled procedure"/>
+    </reasonCode>
+    <serviceProvider>
+        <identifier>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+                    <code value="FI"/>
+                </coding>
+            </type>
+            <system value="http://example.com/dohac/facility-id"/>
+            <value value="11111"/>
+            <assigner>
+                <display value="Services Australia"/>
+            </assigner>
+        </identifier>
+        <display value="ACDC+ Hospital"/>
+    </serviceProvider>
+</Encounter>

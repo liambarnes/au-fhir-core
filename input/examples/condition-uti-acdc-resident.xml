@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="uti-acdc-resident"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+    </meta>
+    <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="inactive"/>
+            <display value="Inactive"/>
+        </coding>
+    </clinicalStatus>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="68566005"/>   
+            <display value="Urinary tract infection"/>
+        </coding>        
+        <text value="Urinary tract infection"/>
+    </code>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <onsetDateTime value="2020-05-09"/>    
+    <abatementDateTime value="2020-05-25"/>
+    <recordedDate value="2020-05-10T09:20:00+10:00"/>
+</Condition>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Condition xmlns="http://hl7.org/fhir">
+    <id value="pi-acdc-resident"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
+    </meta>
+    <extension url="https://smartforms.csiro.au/ig/StructureDefinition/ConditionEnvironmentAcquired">
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="257652008"/>
+                <display value="Aged care facility"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <clinicalStatus>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+        </coding>
+    </clinicalStatus>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="416462003"/>
+            <display value="Wound"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="1163215007"/>
+            <display value="Pressure injury"/>
+        </coding> 
+        <text value="Pressure injury"/>
+    </code>
+    <bodySite>
+        <text value="Left hip"/>
+    </bodySite>
+    <subject>
+        <reference value="Patient/acdc-resident"/>
+    </subject>
+    <onsetDateTime value="2023-12-12"/>
+    <recordedDate value="2023-12-12T09:20:00+10:00"/>
+    <stage>
+        <summary>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="1163220007"/>
+                <display value="Pressure injury stage II"/>
+            </coding>
+            <text value="Pressure injury stage II"/>
+        </summary>        
+        <type>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="260998006"/>
+                <display value="Clinical staging"/>
+            </coding>
+        </type>
+    </stage>
+    <evidence>
+        <code>
+            <text value="Red area with superficial skin loss. 1cm in length by 2cm in width."/>
+        </code>
+    </evidence>
+</Condition>
