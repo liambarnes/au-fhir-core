@@ -88,6 +88,10 @@
         "prefix": [
           "Mrs"
         ]
+      },
+      {
+        "use": "usual",
+        "text": "Clever Form"
       }
     ],
     "telecom": [
@@ -107,6 +111,7 @@
     "address": [
       {
         "use": "home",
+        "type": "physical",
         "line": [
           "4 Brisbane Street"
         ],
@@ -114,8 +119,43 @@
         "state": "QLD",
         "postalCode": "4112",
         "country": "AU"
+      },
+      {
+        "use": "temp",
+        "type": "postal",
+        "line": [
+          "PO Box Number"
+        ],
+        "city": "Brisbane",
+        "state": "QLD",
+        "postalCode": "4112",
+        "country": "AU"
       }
     ],
+    "contact": [
+      {
+        "relationship": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                "code": "C"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "use": "usual",
+          "text": "Ms Phone A Friend"
+        },
+        "telecom": [
+          {
+            "value": "0987654321"
+          }
+        ]
+      }
+    ]             
+,
     "communication": [
       {
         "language": {
