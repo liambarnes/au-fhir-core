@@ -1,5 +1,15 @@
 {
     "cSpell.words": [
         "Nephrologist"
+    ],
+    "xml.fileAssociations": [
+        {
+            "pattern": "input/resources/*.xml",
+            "systemId": "./fhir-all-xsd/fhir-all.xsd"
+          },
+          {
+            "pattern": "input/examples/*.xml",
+            "systemId": "./fhir-all-xsd/fhir-all.xsd"
+          }
     ]
 }

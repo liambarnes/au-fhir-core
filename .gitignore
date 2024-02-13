@@ -1,4 +1,6 @@
 
+/fhir-all-xsd
+/.vscode
 .vs
 .vs/au-fhir-core/v17/.suo
 .vs/slnx.sqlite
@@ -10,6 +12,7 @@ temp/**
 template/**
 txCache/
 *.swp
+**/settings.json
 
 # Temporary folders # (at any level)
 #####################
