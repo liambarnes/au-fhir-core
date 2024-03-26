@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir">
+    <id value="cochlear-implant-erequest"/>
+    <status value="active"/>
+    <deviceName>
+        <name value="Cochlear Nucleus Profile Plus"/>
+        <type value="manufacturer-name"/>
+    </deviceName>
+    <type>
+        <text value="Cochlear implant"/>
+    </type>
+    <patient>
+        <reference value="Patient/erequest"/>
+    </patient>
+</Device>
