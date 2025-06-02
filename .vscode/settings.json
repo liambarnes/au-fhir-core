@@ -1,5 +1,11 @@
-{
-    "cSpell.words": [
-        "Nephrologist"
+{    
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/input/resources/*.json",
+                "/input/examples/*.json"
+            ],
+            "url": "fhir.schema.json"
+        }
     ]
 }
