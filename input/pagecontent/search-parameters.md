@@ -1,24 +1,23 @@
+AU Core does not introduce new search parameters. AU Core SearchParameters are derived from existing [FHIR SearchParameters](https://hl7.org/fhir/R4/searchparameter-registry.html) or [AU Base SearchParameters](https://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html) to specify additional requirements for requesters and responders for the following SearchParameter elements:​
 
-The following [search parameters]({{site.data.fhir.path}}search.html) have been extended in this Implementation Guide and are derived from either the Base FHIR specification or AU Base.  
+- [multipleAnd](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd)
+- [multipleOr](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr)
+- [comparator](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.comparator)
+- [modifier](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.modifier)
+- [chain](https://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.chain) 
 
-The [registry of standard search parameters]({{site.data.fhir.path}}searchparameter-registry.html) can be found in the FHIR specification and [AU defined search parameters](http://build.fhir.org/ig/hl7au/au-fhir-base/search-parameters.html) in AU Base.
+<div class="stu-note" markdown="1">
+The set of AU Core SearchParameters defined in this release of AU Core include search parameters with support for chained search. Future releases of AU Core will define the complete list of search parameters supported by AU Core.
+</div>
+
+The complete list of search parameters supported by AU Core and the rules for use are defined in [AU Core CapabilityStatements](capability-statements.html).
+
+The FHIR specification provides more information on the use of search parameters in the [FHIR RESTful search API](http://hl7.org/fhir/R4/http.html#search) and the [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html).
 
 ### Common search parameters
 
 - [clinical-patient](SearchParameter-au-core-clinical-patient.html)
 
-### Coverage search parameters
-
-- [coverage-patient](SearchParameter-au-core-coverage-patient.html)
-
 ### PractitionerRole search parameters
 
 - [practitionerrole-practitioner](SearchParameter-au-core-practitionerrole-practitioner.html)
-
-### RelatedPerson search parameters
-
-- [relatedperson-patient](SearchParameter-au-core-relatedperson-patient.html)
-
-### Specimen search parameters
-
-- [specimen-patient](SearchParameter-au-core-specimen-patient.html)

@@ -2,7 +2,6 @@
   <id value="bloodpressure-data-absent"/>
   <meta>
     <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-bloodpressure"/>
-    <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-observation"/>
   </meta>
   <status value="final"/>
   <category>
@@ -26,7 +25,7 @@
     <text value="Blood pressure systolic and diastolic"/>
   </code>
   <subject>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/ronny-irvine"/>
   </subject>
   <encounter>
     <reference value="Encounter/discharge-1"/>

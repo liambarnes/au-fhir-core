@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="au-core-condition"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/> 
+  </extension>
   <url value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
   <name value="AUCoreCondition"/>
   <title value="AU Core Condition"/>
-  <status value="draft"/>
+  <status value="active"/>
   <description value="This profile sets minimum expectations for a Condition resource to record, search, and fetch problems, diagnoses, and health concerns associated with a patient. It is based on the [AU Base Condition](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-condition.html) profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Condition resource when conforming to this profile. It provides the floor for standards development for specific uses cases in an Australian context." />
   <kind value="resource"/>
   <abstract value="false"/>
@@ -12,31 +15,87 @@
   <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-condition"/>
   <derivation value="constraint"/>
   <differential>
-    <element id="Condition">
+    <element id="Condition"> 
       <path value="Condition"/>
-      <constraint> 
-        <key value="au-core-cond-05"/> 
-        <severity value="error"/> 
-        <human value="Clinical status shall be present if verification status is not entered-in-error"/> 
-        <expression value="clinicalStatus.exists() or verificationStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and code = 'entered-in-error').exists()"/> 
-        <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/> 
-      </constraint>
     </element>
     <element id="Condition.clinicalStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.clinicalStatus"/>
       <mustSupport value="true"/>
-      <condition value="au-core-cond-05"/>
     </element>
     <element id="Condition.verificationStatus">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.verificationStatus"/>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.category">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.category"/>
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
     <element id="Condition.severity">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.severity"/>
       <mustSupport value="true"/>
       <binding>
@@ -45,6 +104,22 @@
       </binding>
     </element>
     <element id="Condition.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.code"/>
       <min value="1"/>
       <mustSupport value="true"/>
@@ -55,22 +130,37 @@
     </element>
     <element id="Condition.bodySite">
       <path value="Condition.bodySite"/>
-      <condition value="au-core-cond-02"/>
+      <condition value="au-core-cond-01"/>
       <constraint>
-        <key value="au-core-cond-02"/>
+        <key value="au-core-cond-01"/>
         <severity value="error"/>
-        <human value="If a coded body site is provided, at least one code shall be from SNOMED CT"/>
+        <human value="If a coded body site is provided, at least one coding shall be from SNOMED CT"/>
         <expression value="coding.exists() implies coding.where(system='http://snomed.info/sct').exists()"/>
         <xpath value="not(exists(f:coding/f:system)) or exists(f:coding/f:system[@value='http://snomed.info/sct'])"/>
         <source value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition"/>
       </constraint>
-      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="https://healthterminologies.gov.au/fhir/ValueSet/body-site-1"/>
       </binding>
     </element>
     <element id="Condition.subject">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.subject"/>
       <type>
         <code value="Reference"/>
@@ -79,16 +169,23 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Condition.encounter">
-      <path value="Condition.encounter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile
-          value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-encounter"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="Condition.onset[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.onset[x]"/>
       <type>
         <code value="dateTime"/>
@@ -105,6 +202,22 @@
       <mustSupport value="true"/>
     </element>
     <element id="Condition.abatement[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.abatement[x]"/>
       <type>
         <code value="dateTime"/>
@@ -120,29 +233,23 @@
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Condition.recorder">
-      <path value="Condition.recorder"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
-    <element id="Condition.asserter">
-      <path value="Condition.asserter"/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" />
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitionerrole"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient"/>
-        <targetProfile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-relatedperson"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="Condition.note">
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:populate-if-known"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-responder"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/obligation">
+        <extension url="code">
+          <valueCode value="SHALL:no-error"/>
+        </extension>
+        <extension url="actor">
+          <valueCanonical value="http://hl7.org.au/fhir/core/ActorDefinition/au-core-actor-requester"/>
+        </extension>
+      </extension>
       <path value="Condition.note"/>
       <mustSupport value="true"/>
     </element>

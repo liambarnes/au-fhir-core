@@ -2,7 +2,7 @@
 
 [AU Core](http://build.fhir.org/ig/hl7au/au-fhir-core/) is provided to support the use of HL7<sup>&reg;</sup> FHIR<sup>&reg;&copy;</sup> in an Australian context. It sets the minimum expectations on FHIR resources to support conformance and implementation in systems.
 
-AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information associated with a patient. Applications that conform to AU Core can access the following information about the patient:
+AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information. Applications that conform to AU Core can access the following information about the patient:
 - Basic patient details
 - Problems / Conditions
 - Medication orders, dispense, administration and usage
@@ -21,30 +21,26 @@ In this regard it is similar in nature to other international FHIR specification
 For a detailed description of these different usages of AU Core, see the [Conformance Requirements](http://build.fhir.org/ig/hl7au/au-fhir-core/general-requirements.html) and [Must Support](http://build.fhir.org/ig/hl7au/au-fhir-core/must-support.html) pages.
 
 ## Did you find an error?
-Search our the Issues list in [JIRA](https://jira.hl7australia.com/projects/FHIRIG/issues/FHIRIG-245?filter=allopenissues) and [GitHub](https://github.com/hl7au/au-fhir-core/issues?q=is%3Aissue) to ensure the error was not already reported.
+If it's a specification error please search the issues list in [Jira issue tracker](https://jira.hl7.org/issues/?filter=21325) to ensure the error was not already reported. You can use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
+ option at the bottom of each page of the IG to trigger the creation of a Jira issue.
 
-If you're unable to find an open bug addressing the problem, please create a bug report in this repository or use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac)
- option at the bottom of each page of the IG to submit a JIRA issue.
+If you've found an issue with this repository or it's contents then you please [raise a GitHub issue](https://github.com/hl7au/au-fhir-core/issues/new).
 
 ## Contributing to AU Core Development
 
-AU Core is in currently in development.
+AU Core R1 is in currently in development. Ballot for Comment is scheduled for March 2023.
 
-### 1. Join the HL7 AU FHIR Working Group
+### 1. Join the AU Core Technical Design Group
 
-Email fhirwglist@hl7.com.au to join the HL7 AU FHIR working group.
-
-#### Join the AU Core Technical Design Group
-
-Coming soon.
+See [How to Register - Participant Information](https://confluence.csiro.au/display/FHIR/How+to+Register+-+Participant+Information) for information on how to participate in the AU Core Technical Design Group and Clinical Design Group as part of Sparked, the Australian FHIR Accelerator. Visit the [HL7 Australia - AU Core Technical Design Group Home](https://confluence.hl7.org/display/HAFWG/HL7+Australia+-+AU+Core+Technical+Design+Group+Home)
 
 ### 2. Discuss an issue in chat.fhir.org
 
 If you have a question, feature request, or proposed change, the best place to start is Zulip e.g. the https://chat.fhir.org/#narrow/stream/179166-implementers stream. If what you want to discuss is specific to Australia you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia.
 
-### 3. Log a HL7 Jira issue
+### 3. Identify future work or raise discussion points
 
-If you have a question, feature request, or proposed change, the best place to start is by logging a [FHIR IG Jira issue](https://jira.hl7australia.com/projects/FHIRIG/issues) on the HL7 AU Jira site directly or use the ![Propose-a-change](https://github.com/hl7au/au-fhir-core/assets/116611317/642b45cb-c82e-4fb5-a24c-37b263289fac) option at the bottom of each page of the IG to submit a JIRA issue.
+To identify future work or raise discussion points, you can post in the Australia stream https://chat.fhir.org/#narrow/stream/179173-australia or raise [specification feedback](https://confluence.hl7.org/display/HL7/Specification+Feedback) through a [Jira issue tracker](https://jira.hl7.org/issues/?filter=21325).
 
 ### 4. Discuss with the team
 
@@ -53,5 +49,4 @@ Once the issue is logged, you should discuss with the team on [chat.fhir.org in 
 ### 5. Create a pull request
 
 When everyone has agreed on a course of action, IG changes should be submitted as a pull request for review in this repository.
-
 
