@@ -1,7 +1,5 @@
 - [General Requirements](general-requirements.html)
-- [Must Support](must-support.html)
-
-
+- [Declaring Conformance](declaring-conformance.html)
 
 
 

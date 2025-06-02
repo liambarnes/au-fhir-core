@@ -8,14 +8,14 @@
     <th>Requirements (when used alone or in combination)</th>
   </tr>
   <tr>
-        <td>address</td>
+        <td>name</td>
         <td><b>SHALL</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
-  <tr>
-        <td>name</td>
-        <td><b>SHALL</b></td>
+    <tr>
+        <td>address</td>
+        <td><b>SHOULD</b></td>
         <td><code>string</code></td>
         <td></td>
   </tr>
@@ -37,34 +37,13 @@
         <td><code>string</code></td>
         <td></td>
   </tr>
-  <tr>
-        <td>identifier</td>
-        <td><b>MAY</b></td>
-        <td><code>token</code></td>
-        <td>The client <b>SHALL</b> provide at least a code value and <b>MAY</b> provide both the system and code values. The server <b>SHALL</b> support both.</td>
-  </tr>
  </tbody>
 </table>
 
 
 #### Mandatory Search Parameters
 
-The following search parameters **SHALL** be supported:
-
-1. **SHALL** support searching for an location based on text address using the **[`address`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
-    
-    `GET [base]/Location?address=[string]`
-
-    Example:
-    
-      1. GET [base]/Location?address=QLD
-      1. GET [base]/Location?address=QLD&amp;_revinclude=Provenance:target
-
-    *Implementation Notes:* Fetches a bundle of all Location resources matching the name ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
-
-1. **SHALL** support searching for an location based on text name using the **[`name`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+1. **SHALL** support searching based on text name using the **[`name`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
     `GET [base]/Location?name=[string]`
 
@@ -79,8 +58,17 @@ The following search parameters **SHALL** be supported:
 
 The following search parameters **SHOULD** be supported:
 
-1. **SHOULD** support searching for an location based on the **[`address-city`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+1. **SHOULD** support searching based on text address using the **[`address`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
+    
+    `GET [base]/Location?address=[string]`
+
+    Example:
+    
+      1. GET [base]/Location?address=QLD
+
+    *Implementation Notes:* Fetches a bundle of all Location resources matching the address ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
+
+1. **SHOULD** support searching using the **[`address-city`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
     `GET [base]/Location?address-city=[string]`
 
@@ -90,8 +78,7 @@ The following search parameters **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Location resources for the city ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHOULD** support searching for an location based on the **[`addresss-postalcode`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+1. **SHOULD** support searching using the **[`addresss-postalcode`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
     `GET [base]/Location?addresss-postalcode=[string]`
 
@@ -101,8 +88,7 @@ The following search parameters **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all Location resources matching the post code ([how to search by string](http://hl7.org/fhir/R4/search.html#string))
 
-1. **SHOULD** support searching for an location based on the **[`address-state`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
-    - **SHALL** support these **[`_revinclude`](http://hl7.org/fhir/R4/search.html#revinclude)** parameters: `Provenance:target`
+1. **SHOULD** support searching using the **[`address-state`](https://hl7.org/fhir/R4/location.html#search)** search parameter:
     
     `GET [base]/Location?address-state=[string]`
 

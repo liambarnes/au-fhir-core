@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MedicationRequest xmlns="http://hl7.org/fhir">
+    <id value="simvastatin"/>
+    <meta>
+        <profile value="http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationrequest"/>
+    </meta>
+    <status value="active"/>
+    <intent value="order"/>
+    <medicationReference>
+        <reference value="Medication/simvastatin"/>
+    </medicationReference>
+    <subject>
+        <reference value="Patient/wang-li"/>
+    </subject>
+    <authoredOn value="2020-07-15"/>
+    <requester>
+        <reference value="PractitionerRole/surgeon-chau-fryer"/>
+    </requester>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="13644009"/>
+      <display value="Hypercholesterolaemia"/>
+    </coding>
+    <text value="High cholesterol"/>
+  </reasonCode>
+    <dosageInstruction>
+        <text value="Take one tablet daily"/>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <asNeededBoolean value="true"/>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral route"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <doseQuantity>
+                <value value="1"/>
+                <unit value="TAB"/>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+                <code value="TAB"/>
+            </doseQuantity>
+        </doseAndRate>
+    </dosageInstruction>
+</MedicationRequest>

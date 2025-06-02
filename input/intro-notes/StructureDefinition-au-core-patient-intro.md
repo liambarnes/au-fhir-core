@@ -1,3 +1,5 @@
+See [Comparison with other national and international IGs](comparison.html) for a comparison between AU Core profiles and profiles in other implementation guides.
+
 ### Usage scenarios
 
 The following are supported usage scenarios for this profile:
@@ -8,26 +10,19 @@ The following are supported usage scenarios for this profile:
 - Record or update basic demographics and other administrative information about a patient
 - Read information about a patient referenced by another resource
 
-
-### Comparison with other national and international specifications
-
-A resource conforming to this profile is conformant to:
-- [IPA-Patient](https://build.fhir.org/ig/HL7/fhir-ipa/StructureDefinition-ipa-patient.html)
-- [Patient (IPS)](http://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition/Patient-uv-ips)
-- [US Core Patient](http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient)
-
-Conformance in reverse is not guaranteed, i.e. a resource conforming to [International Patient Access](https://build.fhir.org/ig/HL7/fhir-ipa), [International Patient Summary](http://build.fhir.org/ig/HL7/fhir-ips), or [US Core](http://hl7.org/fhir/us/core) **MAY NOT** conform to AU Core.
-
-
 ### Profile specific implementation guidance
-- An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers
-- See the [Representing communication preferences](general-guidance.html#representing-communication-preferences) section for guidance
-- When constructing an address
+- An individual's IHI **SHOULD** be used in `Patient.identifier` if available, in preference to Medicare or DVA numbers.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.
+- This profile supports the sex, gender, and related concepts of: Name to Use, Gender Identity, and Individual Pronouns. See the [Sex and Gender](sex-and-gender.html) page for guidance on exchanging sex and gender related concepts conformant to AU Core.
+  - Sex Assigned at Birth is not marked as *Must Support* but may be exchanged using the [Person Recorded Sex or Gender extension](https://hl7.org/fhir/extensions/StructureDefinition-individual-recordedSexOrGender.html) as profiled by [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html)
+- See the [Representing communication preferences](general-guidance.html#representing-communication-preferences) section for guidance.
+- When constructing an address:
   - an international address can be represented using the core [Address](http://hl7.org/fhir/R4/datatypes.html#Address) data type
   - an Australian address **SHOULD** be represented using the [Australian Address](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-address.html) data type profile
-- When exchanging concepts of sex or gender, refer to the guidance in the [Gender Harmony Implementation Guide](http://hl7.org/xprod/ig/uv/gender-harmony/) and [AU Base Patient](https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-au-patient.html)
+ - Patient names can be provided as a text representation in `name.text` and/or parts such as `name.family` and `name.given`. 
+  - `name.text` specifies the entire name as it is intended to be displayed. This may be provided instead of, or as well as, the specific parts. It is important to note that the presence of parts of a name, e.g. `name.family` and `name.given`, do not imply that `name.text` is known or needs to be supplied. 
+  - In this profile, the following sub-elements of `name` are marked as *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
+    - responders are required to support at least one of the following sub-elements: `name.text`, `name.family`, and `name.given`
+    - requesters are required to support all sub-elements marked *Must Support*: `name.use`, `name.text`, `name.family`, and `name.given`
 
-<p class="stu-note">Specific feedback is sought on preferred identifiers to support where an individual is not eligible for an IHI e.g. tourist or other temporary stay in Australia. Passport is proposed for use (see example <a href="Patient-italia-sofia.html">Patient/italia-sofia</a>).</p>
-
-<p class="stu-note">Specific feedback is sought on whether MRN is to be a supported identifier for patients.</p>
 

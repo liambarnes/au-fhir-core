@@ -1,16 +1,3 @@
-<div class="bg-warning">
-<p>NOTE: The following profiles are candidates for AU Core but not yet available:<ul>
-        <li>AU Core Consent</li>
-        <li>AU Core ImagingStudy</li>
-        <li>AU Core Implantable or Wearable Device</li>
-        <li>AU Core FamilyMemberHistory</li>
-        <li>AU Core Goal</li>
-        <li>AU Core Questionnaire (or declare support for SDC Base Questionnaire Profile)</li>
-        <li>AU Core QuestionnaireResponse</li>
-        <li>Specific List profiles: AU Core Allergies List, AU Core Medicines List, AU Core Problems List</li>
-      </ul></p>
-</div>
-
 ### Profiles
 
 The following profiles and have been defined for this implementation guide.
@@ -21,10 +8,16 @@ The following profiles and have been defined for this implementation guide.
 {% include sd-list-generator.md %}
 <!-- ================================================ -->
 
+#### Extension
+* [AU Core Sex Assigned At Birth](StructureDefinition-au-core-rsg-sexassignedab.html)
+
 <br />
 
 ### Extensions
 
-See the [registry of standard extensions]({{site.data.fhir.path}}extensibility-registry.html) for a complete discussion on extensions names used in FHIR.  All extensions used in this guide are defined in the base FHIR specification or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions). 
+All extensions used in this guide are defined in the FHIR Extensions Pack or [AU Base](http://build.fhir.org/ig/hl7au/au-fhir-base/profiles-and-extensions.html#extensions).
 
-No extensions have been defined for this implementation guide.
+The following extensions are marked with *Must Support* in this implementation guide:
+* [Australian Indigenous Status](https://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-indigenous-status.html) in [AU Core Patient](StructureDefinition-au-core-patient.html)
+* [Individual Pronouns](http://hl7.org/fhir/StructureDefinition/individual-pronouns) in [AU Core Patient](StructureDefinition-au-core-patient.html)
+* [Individual Gender Identity](http://hl7.org/fhir/StructureDefinition/individual-genderIdentity) in [AU Core Patient](StructureDefinition-au-core-patient.html)

@@ -16,28 +16,18 @@
         <type>
             <coding>
                 <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="MC"/>
+                <code value="MR"/>
             </coding>
-            <text value="Medicare Number"/>
         </type>
-        <system value="http://ns.electronichealth.net.au/id/medicare-number"/>
-        <value value="6951449677"/>
-    </identifier>
-    <identifier>
-        <type>
-            <coding>
-                <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
-                <code value="NI"/>
-                <display value="National unique individual identifier"/>
-            </coding>
-            <text value="IHI"/>
-        </type>
-        <system value="http://ns.electronichealth.net.au/id/hi/ihi/1.0"/>
-        <value value="8003608833357361"/>
+        <system value="http://mossypointmc.example.com/mrn/"/>
+        <value value="872038020"/>
+        <assigner>
+            <display value="Mossy Point Medical Centre"/>
+        </assigner>
     </identifier>
     <name>
         <use value="official"/>
-        <text value="Mrs. Anne Bennelong"/>
+        <text value="Mrs. Anne Mary Bennelong"/>
         <family value="Bennelong"/>
         <given value="Anne"/>
         <prefix value="Mrs"/>
@@ -51,10 +41,10 @@
     <birthDate value="1968-10-11"/>
     <address>
         <use value="home"/>
-        <line value="4 Brisbane Street"/>
-        <city value="Brisbane"/>
-        <state value="QLD"/>
-        <postalCode value="4112"/>
+        <line value="144 Otho Street"/>
+        <city value="Inverell"/>
+        <state value="NSW"/>
+        <postalCode value="2360"/>
         <country value="AU"/>
     </address>
     <communication>

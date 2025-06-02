@@ -2,8 +2,11 @@
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
    -  providing a local code
    -  providing a more specific code
-- The use of coding can vary significantly across systems, client applications need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Servers **SHOULD** populate `Observation.code.text` and/or `Observation.code.coding.display` so that client applications can at least display the observation even if the client application does not recognise the code supplied. 
-- The Observation resource can represent a result using one or both of a single value with `Observation.value`, or set of results using either `Observation.component.value` or `Observation.hasMember`.
-  - Although all are marked as must support, servers are not required to support all choices, but they **SHALL** support *at least one* of these elements
-  - A client application **SHALL** support both elements
-- `Observation.identifier` may contain the same identifier as in the order or report connecting the resources that are related to a single request fulfilment workflow
+- The use of coding can vary significantly across systems, requesters need to understand that they may encounter codes they do not recognise and be prepared to handle those resources appropriately. Responders **SHOULD** populate `Observation.code.text` and/or `Observation.code.coding.display` so that the requester can at least display the observation even if the requester does not recognise the code supplied. 
+- The Observation resource can represent a result using a single value in `Observation.value`, or can represent a set of results using either `Observation.component.value` or `Observation.hasMember`.
+  - Although all are marked as *Must Support*, responders are not required to support all choices, but they **SHALL** support *at least one* of these elements
+  - A requester **SHALL** support all elements (`Observation.value`, `Observation.component.value`, `Observation.hasMember`)
+  - for further guidance, see the [Observation Grouping](https://hl7.org/fhir/R4/observation.html#obsgrouping) section in FHIR Specification.
+- `Observation.identifier` may contain the same identifier as in the order or report connecting the resources that are related to a single request fulfilment workflow.
+- Source system identifiers that identify the business process (order ids and reporting identifiers) **MAY** be included as [AU Local Order Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localorderidentifier.html) and [AU Local Report Identifier](http://build.fhir.org/ig/hl7au/au-fhir-base/StructureDefinition-au-localreportidentifier.html) to support workflow and deduplication of Observation resources.
+- See guidance on the construction of an identifier on the relevant Identifier profile page and the section on [Business Identifiers](https://build.fhir.org/ig/hl7au/au-fhir-base/generalguidance.html#business-identifiers) in AU Base.

@@ -7,8 +7,8 @@
     <clinicalStatus>
         <coding>
             <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-            <code value="active"/>
-            <display value="Active"/>
+            <code value="resolved"/>
+            <display value="Resolved"/>
         </coding>
     </clinicalStatus>
     <verificationStatus>
@@ -25,6 +25,13 @@
             <display value="Problem List Item"/>
         </coding>
     </category>
+    <severity>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="24484000"/>
+            <display value="Severe"/>
+        </coding>
+    </severity>
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
@@ -33,13 +40,8 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/smith-emma"/>
+        <reference value="Patient/banks-mia-leanne"/>
     </subject>
     <onsetDateTime value="2020-05-10"/>
-    <recorder>
-        <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </recorder>
-    <asserter>
-        <reference value="PractitionerRole/bobrester-bob-gp"/>
-    </asserter>
+    <abatementDateTime value="2020-05-24"/>
 </Condition>

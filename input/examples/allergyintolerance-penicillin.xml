@@ -11,14 +11,6 @@
       <display value="Active"/>
     </coding>
   </clinicalStatus>
-  <verificationStatus>
-    <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
-      <code value="unconfirmed"/>
-      <display value="Unconfirmed"/>
-    </coding>
-  </verificationStatus>
-  <category value="medication"/>
   <criticality value="high"/>  
   <code>
     <coding>
@@ -28,23 +20,10 @@
     </coding>
   </code>
   <patient>
-    <reference value="Patient/dan-harry"/>
+    <reference value="Patient/howe-deangelo"/>
   </patient>
   <recordedDate value="1999-08-25"/>
-  <recorder>
-    <reference value="PractitionerRole/bobrester-bob-gp"/>
-  </recorder>
-  <asserter>
-    <reference value="Patient/dan-harry"/>
-  </asserter>
   <reaction>
-    <substance>
-      <coding>
-        <system value="http://snomed.info/sct"/>
-        <code value="764146007"/>
-      <display value="Penicillin"/>
-      </coding>
-    </substance>
     <manifestation>
       <coding> 
         <system value="http://snomed.info/sct"/> 
