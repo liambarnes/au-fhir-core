@@ -1,0 +1,46 @@
+{
+    "resourceType": "MedicationStatement",
+    "id": "karvezide-pat-sf",
+    "meta": {
+        "profile": [
+            "http://hl7.org.au/fhir/core/StructureDefinition/au-core-medicationstatement"
+        ]
+    },
+    "status": "active",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "6554011000036100",
+              "display": "Karvezide 300/12.5 tablet"
+            }
+          ],
+          "text": "Karvezide 300/12.5 tablet (Blood pressure lowering medicine)"
+        },
+    "subject": {
+        "reference": "Patient/pat-sf"
+    },
+    "dateAsserted": "2024-09-08",
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "38341003"
+                }
+            ],
+            "text": "Hypertension"
+        }
+    ],
+    "note": [
+        {
+            "text": "Review regularly for blood pressure control and side effects."
+        }
+    ],
+    "dosage": [
+        {
+            "text": "Take one tablet per day."
+        }
+    ]
+}
+

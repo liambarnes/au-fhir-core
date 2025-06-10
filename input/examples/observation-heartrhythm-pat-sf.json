@@ -1,0 +1,52 @@
+{
+	"resourceType": "Observation",
+	"id": "heartrhythm-pat-sf",
+	"meta": {
+		"profile": [
+			"https://smartforms.csiro.au/ig/StructureDefinition/SmartHealthCheckHeartRhythm"
+		]
+	},
+	"status": "final",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "vital-signs"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "364074009"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "8884-9"
+			}
+		],
+		"text": "Heart rhythm"
+	},
+	"subject": {
+		"reference": "Patient/pat-sf"
+	},
+	"effectiveDateTime": "2019-05-07",
+	"performer": [
+		{
+			"reference": "Practitioner/primary-peter"
+		}
+	],
+	"valueCodeableConcept": {
+		"coding": [
+			{
+				"system": "http://snomed.info/sct",
+				"code": "361137007",
+				"display": "Irregular heart beat"
+			}
+		],
+		"text": "Irregular heart beat"
+	}
+}
